@@ -6,6 +6,7 @@ import CheckoutPage from "./pages/CheckoutPage/CheckoutPage";
 import ThankYouPage from "./pages/ThankYouPage/ThankYouPage";
 import Notification from "./components/Notification/Notification";
 import { CartProvider, useCart } from "./context/CartContext";
+import "./App.css";
 
 const Layout=()=> {
   const { notification, cart } = useCart();
@@ -14,7 +15,7 @@ const Layout=()=> {
 
   return (
     <>
-      <nav>
+      <nav className="navbar">
         <Link to="/">Home</Link>
         <Link to="/cart">Cart ({totalItems})</Link>
         <Link to="/checkout">Checkout</Link>
