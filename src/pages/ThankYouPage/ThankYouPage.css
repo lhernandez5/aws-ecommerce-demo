@@ -1,0 +1,17 @@
+.thank-page {
+  max-width: 800px;
+  margin: 36px auto;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.shipping { margin-bottom: 12px; }
+.thank-items { margin-top: 8px; }
+.back-link {
+  display: inline-block;
+  margin-top: 16px;
+  color: #0070f3;
+  text-decoration: none;
+}
