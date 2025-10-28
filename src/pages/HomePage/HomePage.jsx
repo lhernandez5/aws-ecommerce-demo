@@ -8,9 +8,9 @@ const HomePage = () => {
   const { cart, addToCart } = useCart();
 
   return (
-    <div>
+    <div className="home-container">
       <h1>Products</h1>
-      <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+      <div className="product-grid" style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
         {products.map((p) => {
           // Find the product in the cart
           const inCart = cart.find((c) => c.id === p.id);

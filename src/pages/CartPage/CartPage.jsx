@@ -1,5 +1,6 @@
 import React from "react";
 import { useCart } from "../../context/CartContext";
+import { Link } from "react-router-dom";
 import "./CartPage.css";
 
 const CartPage = () => {
@@ -28,11 +29,11 @@ const CartPage = () => {
   }
 
   return (
-    <div>
+    <div className="cart-container">
       <h1>Your Cart</h1>
       <ul>
         {cart.map((item) => (
-          <li key={item.id}>
+          <li className="cart-item" key={item.id}>
             {item.name} – ${item.price.toFixed(2)} x {item.quantity}
             <button onClick={() => addToCart(item)}>+</button>
             <button onClick={() => decreaseQuantity(item.id)}>-</button>
@@ -40,8 +41,13 @@ const CartPage = () => {
           </li>
         ))}
       </ul>
-      <h2>Total: ${totalPrice.toFixed(2)}</h2>
-      <button onClick={clearCart}>Clear Cart</button>
+      <h2 className="cart-total">Total: ${totalPrice.toFixed(2)}</h2>
+      <div style={{ marginTop: "16px" }}>
+        <Link to="/checkout">
+          <button className="checkout-btn">Proceed to Checkout</button>
+        </Link>
+      </div>
+      <button className="checkout-btn" onClick={clearCart}>Clear Cart</button>
     </div>
   );
 };

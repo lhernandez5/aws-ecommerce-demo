@@ -81,9 +81,10 @@ const CheckoutForm = () => {
     <form className="checkout-form" onSubmit={handleSubmit} noValidate>
       {errors.form && <div className="form-error">{errors.form}</div>}
 
-      <label>
+      <label className="label">
         Full name
         <input
+          className="input"
           name="fullName"
           value={form.fullName}
           onChange={handleChange}
@@ -94,9 +95,10 @@ const CheckoutForm = () => {
         )}
       </label>
 
-      <label>
+      <label className="label">
         Email
         <input
+          className="input"
           name="email"
           value={form.email}
           onChange={handleChange}
@@ -106,9 +108,10 @@ const CheckoutForm = () => {
         {errors.email && <div className="field-error">{errors.email}</div>}
       </label>
 
-      <label>
+      <label className="label">
         Address
         <input
+          className="input"
           name="address"
           value={form.address}
           onChange={handleChange}
@@ -118,22 +121,37 @@ const CheckoutForm = () => {
       </label>
 
       <div className="two-col">
-        <label>
+        <label className="label">
           City
-          <input name="city" value={form.city} onChange={handleChange} />
+          <input
+            className="input"
+            name="city"
+            value={form.city}
+            onChange={handleChange}
+          />
           {errors.city && <div className="field-error">{errors.city}</div>}
         </label>
 
-        <label>
+        <label className="label">
           State
-          <input name="state" value={form.state} onChange={handleChange} />
+          <input
+            className="input"
+            name="state"
+            value={form.state}
+            onChange={handleChange}
+          />
           {errors.state && <div className="field-error">{errors.state}</div>}
         </label>
       </div>
 
-      <label>
+      <label className="label">
         ZIP / Postal code
-        <input name="zip" value={form.zip} onChange={handleChange} />
+        <input
+          className="input"
+          name="zip"
+          value={form.zip}
+          onChange={handleChange}
+        />
         {errors.zip && <div className="field-error">{errors.zip}</div>}
       </label>
 

@@ -18,7 +18,6 @@ const Layout=()=> {
       <nav className="navbar">
         <Link to="/">Home</Link>
         <Link to="/cart">Cart ({totalItems})</Link>
-        <Link to="/checkout">Checkout</Link>
       </nav>
 
       <Routes>
