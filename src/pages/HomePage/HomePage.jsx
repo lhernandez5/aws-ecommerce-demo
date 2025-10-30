@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import { products } from "../../utils/mockData";
-import { useCart } from "../../context/CartContext";
+import { useCart } from "../../context/cartContext";
 import "./HomePage.css";
 
 const HomePage = () => {

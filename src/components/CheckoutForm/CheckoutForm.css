@@ -18,6 +18,13 @@
   font-size: 14px;
 }
 
+.checkout-form select {
+  margin: 10px;
+  padding: 50% 10% 90%;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;

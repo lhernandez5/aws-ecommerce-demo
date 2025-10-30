@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { US_STATES } from "../../data/usStates";
 import { useCart } from "../../context/CartContext";
 import "./CheckoutForm.css";
 
@@ -81,10 +82,9 @@ const CheckoutForm = () => {
     <form className="checkout-form" onSubmit={handleSubmit} noValidate>
       {errors.form && <div className="form-error">{errors.form}</div>}
 
-      <label className="label">
+      <label>
         Full name
         <input
-          className="input"
           name="fullName"
           value={form.fullName}
           onChange={handleChange}
@@ -95,10 +95,9 @@ const CheckoutForm = () => {
         )}
       </label>
 
-      <label className="label">
+      <label>
         Email
         <input
-          className="input"
           name="email"
           value={form.email}
           onChange={handleChange}
@@ -108,10 +107,9 @@ const CheckoutForm = () => {
         {errors.email && <div className="field-error">{errors.email}</div>}
       </label>
 
-      <label className="label">
+      <label>
         Address
         <input
-          className="input"
           name="address"
           value={form.address}
           onChange={handleChange}
@@ -121,10 +119,9 @@ const CheckoutForm = () => {
       </label>
 
       <div className="two-col">
-        <label className="label">
+        <label>
           City
           <input
-            className="input"
             name="city"
             value={form.city}
             onChange={handleChange}
@@ -132,22 +129,27 @@ const CheckoutForm = () => {
           {errors.city && <div className="field-error">{errors.city}</div>}
         </label>
 
-        <label className="label">
+        <label>
           State
-          <input
-            className="input"
+          <select
             name="state"
             value={form.state}
             onChange={handleChange}
-          />
+          >
+            <option value="">Select State</option>
+            {US_STATES.map(({ name, abbreviation }) => (
+              <option key={abbreviation} value={abbreviation}>
+                {name}
+              </option>
+            ))}
+          </select>
           {errors.state && <div className="field-error">{errors.state}</div>}
         </label>
       </div>
 
-      <label className="label">
+      <label>
         ZIP / Postal code
         <input
-          className="input"
           name="zip"
           value={form.zip}
           onChange={handleChange}

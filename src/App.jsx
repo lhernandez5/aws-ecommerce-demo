@@ -5,7 +5,7 @@ import CartPage from "./pages/CartPage/CartPage";
 import CheckoutPage from "./pages/CheckoutPage/CheckoutPage";
 import ThankYouPage from "./pages/ThankYouPage/ThankYouPage";
 import Notification from "./components/Notification/Notification";
-import { CartProvider, useCart } from "./context/CartContext";
+import { CartProvider, useCart } from "./context/cartContext";
 import "./App.css";
 
 const Layout=()=> {
