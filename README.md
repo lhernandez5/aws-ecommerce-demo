@@ -1,16 +1,76 @@
-# React + Vite
+# E-Commerce Site (Vite + Terraform + AWS S3)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A demo e-commerce website built with **React (Vite)**, hosted as a **static site on AWS S3**. The project uses **Terraform** to provision AWS infrastructure, including S3 buckets for hosting and public access configuration. This setup demonstrates **Infrastructure as Code (IaC)** best practices and a modern front-end workflow.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- Fully functional **React e-commerce frontend** scaffolded with **Vite**.
+- Static site hosting on **AWS S3** with website configuration.
+- Terraform-managed **Infrastructure as Code**:
+  - S3 bucket creation
+  - Bucket policy for public-read access
+  - Optional website index/error document configuration
+- Supports **deployment automation**: React build artifacts can be uploaded to S3 using Terraform.
+- Modular and **reusable Terraform code** with variables for easy environment changes.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React + Vite  
+- **Infrastructure:** Terraform  
+- **Cloud Provider:** AWS (S3 static website hosting)  
+- **Version Control:** Git  
+
+---
+
+## 📁 Repository Structure
+├── infra/                   # Terraform code for AWS infrastructure
+│   ├── main.tf              # Core resources (S3 bucket, website config, policies)
+│   ├── variables.tf         # Terraform input variables
+│   ├── outputs.tf           # Terraform outputs (e.g., website URL)
+│   └── provider.tf          # AWS provider configuration
+├── src/                     # React source code
+│   └── …
+├── public/                  # Static assets for React
+│   └── …
+├── package.json
+├── vite.config.js
+└── .gitignore
+
+---
+
+## ⚡ Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/ecommerce-vite-terraform.git
+cd ecommerce-vite-terraform
+```
+
+### 2. Install Frontend Dependencies
+```bash
+npm install
+```
+
+### 3. Build React App
+```bash
+npm run build
+```
+### 4.Configure AWS Credentials
+
+Ensure AWS CLI is configured with a user that has S3 permissions:
+```bash
+aws configure
+```
+
+### 5. Deploy Infrastructure with Terraform
+```bash
+cd infra
+terraform init
+terraform plan
+terraform apply
+```
