@@ -1,3 +1,7 @@
+# OS / Editor
+.DS_Store
+.vscode/
+
 # Logs
 logs
 *.log
@@ -7,10 +11,12 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+# Node modules (installed packages)
+node_modules/
 dist
 dist-ssr
 *.local
+dist/
 
 # Editor directories and files
 .vscode/*
@@ -22,3 +28,27 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Terraform state files
+*.tfstate
+*.tfstate.backup
+
+# Crash logs
+crash.log
+
+# Terraform plugin directory
+.terraform/
+
+# Terraform variables containing sensitive info
+*.tfvars
+.env
+
+# Local override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Provider plugin cache
+.terraform/
+.terraform.lock.hcl
