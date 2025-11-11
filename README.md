@@ -24,23 +24,6 @@ A demo e-commerce website built with **React (Vite)**, hosted as a **static site
 - **Cloud Provider:** AWS (S3 static website hosting)  
 - **Version Control:** Git  
 
----
-
-## 📁 Repository Structure
-├── infra/                   # Terraform code for AWS infrastructure
-│   ├── main.tf              # Core resources (S3 bucket, website config, policies)
-│   ├── variables.tf         # Terraform input variables
-│   ├── outputs.tf           # Terraform outputs (e.g., website URL)
-│   └── provider.tf          # AWS provider configuration
-├── src/                     # React source code
-│   └── …
-├── public/                  # Static assets for React
-│   └── …
-├── package.json
-├── vite.config.js
-└── .gitignore
-
----
 
 ## ⚡ Getting Started
 
