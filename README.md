@@ -1,6 +1,6 @@
 # E-Commerce Site (Vite + Terraform + AWS S3)
 
-A demo e-commerce website built with **React (Vite)**, hosted as a **static site on AWS S3**. The project uses **Terraform** to provision AWS infrastructure, including S3 buckets for hosting and public access configuration. This setup demonstrates **Infrastructure as Code (IaC)** best practices and a modern front-end workflow.
+A demo e-commerce website built with **React (Vite)**, hosted as a **static site on AWS S3**. The project uses **Terraform** to provision AWS infrastructure, including S3 buckets for hosting and public access configuration. 
 
 ---
 
